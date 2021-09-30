@@ -111,14 +111,14 @@ InsertoiKantaan() {
 
 render() {
   return (
-      
+    
     <form onSubmit={this.handleSubmit}>        
     <div className="mb-3">
     <h4>Add customer</h4>
     
     <div className="col-auto">
      <label for="CustomerID" className="form-label">Customer ID</label>
-     </div>
+    </div>
      <div className="col-auto">
       <input id="CustomerID" className="form-control" type="text" title="Syötä asiakastunnus" placeholder="CustomerID" onChange={this.handleChangeCustomerID} /> 
       </div>
@@ -142,7 +142,6 @@ render() {
       <br/>
       <br/>
       <button className="btn btn-success" type="submit">Tallenna uudet tiedot</button> 
-      </div>
     </form>
 
  
