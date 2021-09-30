@@ -15,6 +15,7 @@ constructor (props) {
   this.handleChangePhone = this.handleChangePhone.bind(this);
   this.handleChangeFax = this.handleChangeFax.bind(this);
   this.handleSubmit = this.handleSubmit.bind(this);
+
 }
 dismiss() {
   this.props.unmountMe();
@@ -104,32 +105,26 @@ InsertoiKantaan() {
          console.log(`Response from server: ${success}.`);
          if (success) {
             alert("Pyyntö asiakkaan tallettamiseksi tehty");
-            //this.dismiss();
-         }
+            this.dismiss();
+          }
      });
 }
 
 render() {
   return (
-    
+
+    <div>
+      <h3>Add customer</h3>
     <form onSubmit={this.handleSubmit}>        
-    <div className="mb-3">
-    <h4>Add customer</h4>
-    
-    <div className="col-auto">
-     <label for="CustomerID" className="form-label">Customer ID</label>
-    </div>
-     <div className="col-auto">
+    <div className="mb-3">    
+      <label for="CustomerID" className="form-label">Customer ID</label>
       <input id="CustomerID" className="form-control" type="text" title="Syötä asiakastunnus" placeholder="CustomerID" onChange={this.handleChangeCustomerID} /> 
-      </div>
     </div>
 
-      <div className="col-auto">
+    <div className="mb-3">    
         <label for="CompanyName" className="col-form-label">Company Name</label>
-      </div>
-      <div className="col-auto">
         <input id="CompanyName" className="form-control" type="text" title="Syötä firman nimi" placeholder="CompanyName" onChange={this.handleChangeCompanyName} /> 
-      </div>
+    </div>
 
   
 
@@ -143,7 +138,7 @@ render() {
       <br/>
       <button className="btn btn-success" type="submit">Tallenna uudet tiedot</button> 
     </form>
-
+    </div>
  
      
   );

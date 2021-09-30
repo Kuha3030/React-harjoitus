@@ -6,7 +6,7 @@ import CustomerAdd from './customerAdd';
 
 class CustomerFetch extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       customers: [],
       recordcount: 0,
@@ -14,8 +14,15 @@ class CustomerFetch extends Component {
       to: 9,
       userId: "",
       show: "showCustomers"
-    };
+    }
+    this.handleChildUnmount = this.handleChildUnmount.bind(this)
+    
   }
+
+handleChildUnmount() {
+  this.setState({show: "showCustomers"})
+  this.haeTypicodesta()
+}
 
 handleClickAddForm = () => {
   this.setState({show: 'addCustomers'})
@@ -127,7 +134,7 @@ handleClickShowCustomers = () => {
       return (
       <div>
         <button className="btn btn-secondary" onClick={this.handleClickShowCustomers}>Show customers</button>
-        <CustomerAdd />
+        <CustomerAdd unmountMe={this.handleChildUnmount}/>
       </div>
       )
     }
