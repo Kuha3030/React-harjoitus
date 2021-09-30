@@ -133,6 +133,7 @@ handleClickShowCustomers = () => {
     {
       return (
       <div>
+        {/* Kommentti */}
         <button className="btn btn-secondary" onClick={this.handleClickShowCustomers}>Show customers</button>
         <CustomerAdd unmountMe={this.handleChildUnmount}/>
       </div>
