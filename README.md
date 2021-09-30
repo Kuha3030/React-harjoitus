@@ -1,11 +1,11 @@
 # Repon lisäys ohjeet:
-listaa kansion sisältö: ls -a
-poistaa mahdolliset vanhat .git tiedostot: rm -rf .git 
-luo paikallisen repositorion: git init 
-lisää kaikki tiedostot commitiin: git add .
-commitoi muutos: git commit -m "Creating the repository. Adding customers works!"
-lisää remote repo (pitää olla luotu valmiiksi): git remote add origin https://github.com/Kuha3030/React-harjoitus.git
-pushaa muutokset remote repoon: git push -u origin master
+* listaa kansion sisältö: ls -a
+* poistaa mahdolliset vanhat .git tiedostot: rm -rf .git 
+* luo paikallisen repositorion: git init 
+* lisää kaikki tiedostot commitiin: git add .
+* commitoi muutos: git commit -m "Creating the repository. Adding customers works!"
+* lisää remote repo (pitää olla luotu valmiiksi): git remote add origin https://github.com/Kuha3030/React-harjoitus.git
+* pushaa muutokset remote repoon: git push -u origin master
 
 # Getting Started with Create React App
 
