@@ -8,12 +8,15 @@ import Header from './header';
 import Body from './body';
 import Footer from './footer';
 import AnaClock from './analogclock';
+import Navigation from './navigation';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Body />
-    <Footer />
+    {/* <Header /> */}
+    <Navigation />
+    {/* <Footer /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -15,10 +15,10 @@ constructor (props) {
   this.handleChangePhone = this.handleChangePhone.bind(this);
   this.handleChangeFax = this.handleChangeFax.bind(this);
   this.handleSubmit = this.handleSubmit.bind(this);
-
 }
+
 dismiss() {
-  this.props.unmountMe();
+  this.props.unmountMe()
 } 
 
 // Input kenttien onChange tapahtumakäsittelijät
@@ -105,7 +105,7 @@ InsertoiKantaan() {
          console.log(`Response from server: ${success}.`);
          if (success) {
             alert("Pyyntö asiakkaan tallettamiseksi tehty");
-            this.dismiss();
+            this.props.unmountMe();
           }
      });
 }
@@ -116,24 +116,41 @@ render() {
     <div>
       <h3>Add customer</h3>
     <form onSubmit={this.handleSubmit}>        
-    <div className="mb-3">    
+
+    <div className="col-3 text-start"> 
+    <div>   
       <label for="CustomerID" className="form-label">Customer ID</label>
-      <input id="CustomerID" className="form-control" type="text" title="Syötä asiakastunnus" placeholder="CustomerID" onChange={this.handleChangeCustomerID} /> 
+      </div>
+      <input className="form-control ms-1 mt-n2" type="text" title="Syötä asiakastunnus" placeholder="CustomerID" onChange={this.handleChangeCustomerID} /> 
     </div>
 
-    <div className="mb-3">    
-        <label for="CompanyName" className="col-form-label">Company Name</label>
-        <input id="CompanyName" className="form-control" type="text" title="Syötä firman nimi" placeholder="CompanyName" onChange={this.handleChangeCompanyName} /> 
+    <div className="col-3 text-start">    
+        <label for="CompanyName" className="form-label">Company Name</label>
+        <input id="CompanyName" className="form-control ms-1 mt-n2" type="text" title="Syötä firman nimi" placeholder="CompanyName" onChange={this.handleChangeCompanyName} /> 
     </div>
 
-  
+    <div className="col-3 text-start">    
+        <label for="ContactName" className="form-label">Contact Name</label>
+        <input id="ContactName" className="form-control ms-1 mt-n2" type="text" title="Syötä kontaktin nimi" placeholder="ContactName" onChange={this.handleChangeContactName} /> 
+    </div>
+    <div className="col-3 text-start">    
+        <label for="ContactTitle" className="form-label">Contact Title</label>
+        <input id="ContactTitle" className="form-control ms-1 mt-n2" type="text" title="Syötä kontaktin titteli" placeholder="ContactTitle" onChange={this.handleChangeContactTitle} /> 
+    </div>
+    <div className="col-3 text-start">    
+        <label for="Address" className="form-label">Address</label>
+        <input id="Address" className="form-control ms-1 mt-n2" type="text" title="Syötä osoite" placeholder="Address" onChange={this.handleChangeAddress} /> 
+    </div>
+    <div className="col-3 text-start">    
+        <label for="Phone" className="form-label">Phone</label>
+        <input id="Phone" className="form-control ms-1 mt-n2" type="text" title="Syötä puhelinnumero" placeholder="Phone" onChange={this.handleChangePhone} /> 
+    </div>
+    <div className="col-3 text-start">    
+        <label for="Fax" className="form-label">Fax</label>
+        <input id="Fax" className="form-control ms-1 mt-n2" type="text" title="Syötä faxin numero" placeholder="Fax" onChange={this.handleChangeFax} /> 
+    </div>
 
-      <label for="CompanyName" className="form-label">Contact Name</label>
-      <input className="form-control" type="text" placeholder="ContactName" onChange={this.handleChangeContactName} />    
-      <input className="form-control" type="text" placeholder="ContactTitle" onChange={this.handleChangeContactTitle} />  
-      <input className="form-control" type="text" placeholder="Address" onChange={this.handleChangeAddress} />   
-      <input className="form-control" type="text" placeholder="Phone" onChange={this.handleChangePhone} />   
-      <input className="form-control" type="text" placeholder="Fax" onChange={this.handleChangeFax} />  
+
       <br/>
       <br/>
       <button className="btn btn-success" type="submit">Tallenna uudet tiedot</button> 

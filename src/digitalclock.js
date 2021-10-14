@@ -45,7 +45,7 @@ class DigitalClock extends Component {
     render() {
 
         let options = {
-            width: "150px",
+            width: "550px",
             border: true,
             borderColor: "#2e2e2e",
             baseColor: "grey",
@@ -60,6 +60,7 @@ class DigitalClock extends Component {
         return (
             <>
                 <div className="digiclock" align="center">
+                    <br />
                     <AnalogClock {...options} />                   
                 </div>
 

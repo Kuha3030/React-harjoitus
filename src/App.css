@@ -1,6 +1,6 @@
 .App {
-  text-align: center;  
-  background-color: wheat;
+  /* text-align: center;   */
+  /* background-color: grey; */
 }
 
 .App-logo {
@@ -21,8 +21,8 @@
   /* max-width: 75vw; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   font-size: calc(10px + 3vmin);
   color: gold;
 }
@@ -32,11 +32,11 @@
   min-height: 66vh;
 
   /* max-width: 75vw; */
-  align-self: center;
+  /* align-self: center; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   padding-top:10px;
   padding-bottom: 10px;
   color: wheat;
@@ -46,12 +46,13 @@
   background-color: #282c34;
   min-height: 10vh;
   max-height: 10vh;
+  padding-top:15px;
 
   /* max-width: 75vw; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   font-size: calc(10px + 1vmin);
   color: wheat;
 }
@@ -66,7 +67,7 @@ hr {
   border: 0; 
   padding: 0; 
 }
-table {
+/* table {
   table-layout: fixed;
   width: 100px;
   overflow: scroll;
@@ -79,15 +80,26 @@ td {
 th {
   font-size: 30px;
   color: gold;
-}
+} */
 .btn {
-color:gold;
+/* color:gold; */
 margin: 10px;
 min-height: 10px;
 min-width: 120px;
 font-weight: bold;
 }
+.btn-actions {
+  min-width: 0px;
 
+}
+
+label{
+  text-align: left;
+  padding-top:10px;
+}
+input{
+  padding: 10px;
+}
 
 @keyframes App-logo-spin {
   from {
