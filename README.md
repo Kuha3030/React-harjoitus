@@ -7,6 +7,10 @@
 * lisää remote repo (pitää olla luotu valmiiksi): git remote add origin https://github.com/Kuha3030/React-harjoitus.git
 * pushaa muutokset remote repoon: git push -u origin master
 
+# GIT BRANCHIIT:
+
+https://stackabuse.com/git-merge-branch-into-master/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
